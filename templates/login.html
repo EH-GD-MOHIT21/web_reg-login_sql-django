@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'index1.css' %}">
+</head>
+
+<body>
+    <marquee direction="left">Welcome User to NestedMails Use Your Crediantials to sign in.</marquee>
+    <form action="verify" method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <div class="btns">
+                <a href="/register">Register</a>
+                <a href="/login" id="login">Login</a>
+            </div>
+            <p><label>UserName: <input type="text" name="uname" required placeholder="Enter Username"></label></p>
+            <p><label>Password: <input type="password" placeholder="Enter Password" name="password" required></label></p>
+            <button type="submit" id="logger">Procced</button>
+        </div>
+    </form>
+</body>
+
+</html>

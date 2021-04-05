@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <script src="{% static 'index.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+    <div class="parent">
+        <form action="registeruser" method="POST" onsubmit="return validate()">
+            {% csrf_token %}
+
+            <div class="container">
+                <div class="header">
+                    <h1>
+                        Welcome User to NestedMails
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                </div>
+
+                <div class="btns">
+                    <a href="/register" id="register">Register</a>
+                    <a href="/login">Login</a>
+
+                </div>
+
+                <p><label>First Name: <input type="text" id="name" name="fname" placeholder="First Name" required></label></p>
+                <p><label>Last Name: <input type="text" id="lname" name="lname" placeholder="Last Name" required></label></p>
+                <p><label>Age: <input type="number" placeholder="Enter Valid Age" name="age" id="age" required></label></p>
+                <p><label>Mail id: <input type="email" id="mail" placeholder="Otp will be send on it." name="mail" required></label></p>
+                <button id="otp-gen" onclick="handler()" type="button">Generate OTP </button>
+                <span id="timeshower"> </span>
+                <p><label>OTP: <input type="number" id="otp" placeholder="Enter one time password" required></label></p>
+                <p><label>UserName: <input type="text" placeholder="Should be Unique" id="uname" name="uname" required></label></p>
+                <p><label>Password: <input type="password" placeholder="Must be strong" id="pass" name="pass" required></label></p>
+                <p><label>Confirm Password: <input type="password" placeholder="Must be Same as Password" id="pass1" required></label></p>
+                <button type="submit">Procced</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: #FC5C7D;
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+}
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 13px;
+}
+
+marquee {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 1%;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#login {
+    pointer-events: none;
+    background-color: grey;
+}
+
+.container {
+    margin: auto;
+    width: 50%;
+    text-align: left;
+    margin-top: 11%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+input {
+    width: 70%;
+    height: 60px;
+    margin-top: 6px;
+    text-align: center;
+    border-radius: 25px;
+    padding-left: 20px;
+    font-size: 21px;
+}
+
+input[type="password"] {
+    margin-left: 6px;
+    margin-top: 30px;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 30px auto;
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #fd79a8;
+}
+
+::placeholder {
+    color: #ef5777;
+}
+
+button:hover {
+    color: white;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 50%);
+    font-weight: 600;
+    animation: mohit 4s infinite;
+}
+
+@keyframes mohit {
+    from {
+        background: #6A82FB;
+    }
+    to {
+        background: #FC5C7D;
+    }
+}
+
+@media(max-width: 1100px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media(max-width: 800px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media(max-width: 600px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media(max-width: 500px) {
+    input {
+        width: 97%;
+        margin-bottom: 10px;
+    }
+    input[type="password"] {
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+}
+
+@media(max-width: 485px) {
+    .container {
+        width: 90%;
+    }
+}
